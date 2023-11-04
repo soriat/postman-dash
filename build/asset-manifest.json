@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/postman-dash/static/css/main.bfef3e49.css",
+    "main.js": "/postman-dash/static/js/main.5df6b738.js",
+    "index.html": "/postman-dash/index.html",
+    "main.bfef3e49.css.map": "/postman-dash/static/css/main.bfef3e49.css.map",
+    "main.5df6b738.js.map": "/postman-dash/static/js/main.5df6b738.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfef3e49.css",
+    "static/js/main.5df6b738.js"
+  ]
+}
