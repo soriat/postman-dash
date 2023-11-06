@@ -144,6 +144,11 @@ export default function Sidenav() {
                 }
               />
             </ListItem>
+            {checkedPaths.length > 1 && (
+              <Box sx={{ marginTop: '-10px', pl: '20px' }}>
+                <EndpointData data={dataAnalytics['all']} />
+              </Box>
+            )}
             <FormGroup sx={{ pl: '20px' }}>
               {uniquePaths.map((path) => (
                 <React.Fragment key={path}>

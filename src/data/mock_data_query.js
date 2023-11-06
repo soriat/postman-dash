@@ -190,7 +190,7 @@ export function analyzeApiData(data) {
   const allStats = {
     totalRequests: 0,
     successfulRequests: 0,
-    over800ms: 0,
+    timeUnderThreshold: 0,
     statusCodeValues: [],
     responseTimeValues: [],
     timestamps: [],
@@ -211,24 +211,21 @@ export function analyzeApiData(data) {
     const isSuccessful =
       status_code.toString().startsWith('2') || status_code.toString() === 'success';
 
-    pathStats[path].totalRequests++;
     if (isSuccessful) {
       pathStats[path].successfulRequests++;
+      allStats.successfulRequests++;
     }
     if (response_time < 1000) {
       pathStats[path].timeUnderThreshold++;
+      allStats.timeUnderThreshold++;
     }
+
+    pathStats[path].totalRequests++;
     pathStats[path].statusCodeValues.push(isSuccessful ? 1000 : 0);
     pathStats[path].responseTimeValues.push(response_time);
     pathStats[path].timestamps.push(timeValue);
 
     allStats.totalRequests++;
-    if (isSuccessful) {
-      allStats.successfulRequests++;
-    }
-    if (response_time < 1000) {
-      allStats.timeUnderThreshold++;
-    }
     allStats.statusCodeValues.push(isSuccessful ? 1000 : 0);
     allStats.responseTimeValues.push(response_time);
     allStats.timestamps.push(timeValue);

@@ -64,7 +64,7 @@ These metrics are shown below endpoints in the sidebar
 
 - Health % refers to the percentage of endpoints that succeeded.
 - Speed % refers to the percentage of endpoints that responded in under 1 second.
-- 90% and over is shown as green. <70% is red.
+- 90% and over is shown as green. <80% is red.
 
 ##### API trends
 

@@ -53,14 +53,14 @@ export default function EndpointData({ data }) {
   return (
     <List sx={{ ml: '-15px' }}>
       {shouldShowHealth && (
-        <ListItem>
+        <ListItem sx={{ marginTop: '-10px' }}>
           <Typography variant="body1">
             Health: {rate(successRate)}
             {trend(statusCodeTrend)}
           </Typography>
         </ListItem>
       )}
-      <ListItem>
+      <ListItem sx={{ marginTop: '-10px' }}>
         <Typography variant="body1">
           Speed: {rate(fastResponseRate)}
           {trend(responseTimeTrend)}
