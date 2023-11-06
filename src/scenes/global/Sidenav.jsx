@@ -103,7 +103,7 @@ export default function Sidenav() {
           <ListItemButton onClick={handleClick}>
             <Item
               title="Dashboard"
-              to="/"
+              to="/postman-dash"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

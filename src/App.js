@@ -16,7 +16,7 @@ function App() {
           <main className="content">
             <FilterBar />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/postman-dash" element={<Dashboard />} />
             </Routes>
           </main>
         </div>
