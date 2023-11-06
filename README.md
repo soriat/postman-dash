@@ -64,6 +64,7 @@ These metrics are shown below endpoints in the sidebar
 
 - Health % refers to the percentage of endpoints that succeeded.
 - Speed % refers to the percentage of endpoints that responded in under 1 second.
+- 90% and over is shown as green. <70% is red.
 
 ##### API trends
 
@@ -108,10 +109,16 @@ I also assumed that any datasets plugged into this would contain the 5 fields pr
 
 ## Future Improvements
 
-I wanted there to be multiple pages/dashboards where users could save preset charts.
+I wanted there to be multiple pages/dashboards where users could save custom charts. Perhaps take a note from Postman and create collections of APIs as well.
 
 I had implemented a dark mode but nivo charts didn't play nicely with it so I scrapped it to focus on the main task.
 
 Better responsiveness. The grid styling can only be squished so far and different charts need different rules. Pie Charts, for example, look hilariously tiny when squished due to their labels. This can be fixed by removing the labels in favor of legends however.
 
 Saving the state in LocalStorage so that it could persist through page loads would be nice. I already unified the state into a global provider so it should be really easy to do so; just not important.
+
+This can be infinitely expanded depending on whether or not we get a richer dataset. One very important (but missing) signal is what the HTTP method is for these responses. The same endpoint can even support multiple types of methods. Perhaps all the failures in /a/b/c/ are POSTs while the GETs were succeeding.
+
+There are good tools for geo charts as well. If this data was available a world map showing the origin or requests would be useful and easy to add.
+
+And of course, more predictive tools and analytics. Ideally tied in to an alert system with user defined thresholds.
