@@ -7,6 +7,7 @@ import {
   Collapse,
   FormControlLabel,
   FormGroup,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -15,7 +16,6 @@ import {
 import { mockApiData } from 'data/mock_api_data';
 import { analyzeApiData } from 'data/mock_data_query';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import EndpointData from 'components/EndpointData';
 import { useGlobalState } from './GlobalStateProvider';
@@ -97,7 +97,15 @@ export default function Sidenav() {
         }}
       >
         <Box sx={{ p: 2, borderBottom: 1, borderColor: 'divider' }}>
-          <Typography variant="h4">Postman Takehome</Typography>
+          <Link
+            href="https://github.com/soriat/postman-dash"
+            target="_blank"
+            rel="noopener noreferrer"
+            underline="hover"
+            sx={{ color: 'inherit', textDecoration: 'none' }}
+          >
+            <Typography variant="h4">Postman Takehome</Typography>
+          </Link>
         </Box>
         <List>
           <ListItemButton onClick={handleClick}>
